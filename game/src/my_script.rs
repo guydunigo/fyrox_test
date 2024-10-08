@@ -29,7 +29,12 @@ impl ScriptTrait for MyScript {
         // Respond to OS events here.
     }
 
-    fn on_update(&mut self, _context: &mut ScriptContext) {
+    fn on_update(&mut self, context: &mut ScriptContext) {
         // Put object logic here.
+        let transform = context.scene.graph[context.handle].local_transform_mut();
+        // TODO: through animation nodes ?
+        let mut pos = transform.position().clone_owned();
+        pos.x = f32::cos(context.elapsed_time % 6.3);
+        transform.set_position(pos);
     }
 }
