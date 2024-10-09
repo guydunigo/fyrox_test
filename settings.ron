@@ -35,7 +35,7 @@
         draw_grid: true,
     ),
     build: (
-        selected_profile: 0,
+        selected_profile: 1,
         profiles: [
             (
                 name: "Debug",
@@ -471,11 +471,23 @@
     scene_settings: {
         "data/scene.rgs": (
             camera_settings: (
-                position: (0.0, 1.0, 0.0),
+                position: (0.0, 0.0, -1.2302182),
                 yaw: 0.0,
                 pitch: 0.0,
             ),
             node_infos: {
+                (
+                    index: 3,
+                    generation: 1,
+                ): (
+                    is_expanded: true,
+                ),
+                (
+                    index: 2,
+                    generation: 1,
+                ): (
+                    is_expanded: true,
+                ),
                 (
                     index: 44,
                     generation: 1,
@@ -489,19 +501,7 @@
                     is_expanded: true,
                 ),
                 (
-                    index: 2,
-                    generation: 1,
-                ): (
-                    is_expanded: true,
-                ),
-                (
                     index: 0,
-                    generation: 1,
-                ): (
-                    is_expanded: true,
-                ),
-                (
-                    index: 3,
                     generation: 1,
                 ): (
                     is_expanded: true,
@@ -516,7 +516,7 @@
     ),
     windows: (
         window_position: (0.0, 0.0),
-        window_size: (1356.0, 741.0),
+        window_size: (1366.0, 768.0),
         layout: None,
     ),
 )

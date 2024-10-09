@@ -34,7 +34,9 @@ impl ScriptTrait for MyScript {
         let transform = context.scene.graph[context.handle].local_transform_mut();
         // TODO: through animation nodes ?
         let mut pos = transform.position().clone_owned();
-        pos.x = f32::cos(context.elapsed_time % 6.3);
+        pos.x = f32::cos(context.elapsed_time % 6.3) / 2.;
+        pos.y = f32::sin(context.elapsed_time % 6.3) / 2.;
+        pos.z = f32::cos(context.elapsed_time % 6.3) / 2. - 0.55;
         transform.set_position(pos);
     }
 }
